@@ -103,18 +103,38 @@ print("\nQuestion 11: Find the most frequent character in 'mississippi'")
 # Question 12: Check if two strings are anagrams: "listen" and "silent"
 print("\nQuestion 12: Check if two strings are anagrams: 'listen' and 'silent'")
 # Your code here
-
+first_name = "listen"
+second_name = "silent"
+first_length = len(first_name)
+second_length = len(second_name)
+if first_length != second_length:
+  print("No")
+elif sorted(first_name) == sorted(second_name):
+  print("Anagrams")
+else:
+  print("No")
+  
 # Question 13: Capitalize first letter of each word in "python programming language"
 print("\nQuestion 13: Capitalize first letter of each word in 'python programming language'")
 # Your code here
+name = input()
+capital_name = name.title()
+print(capital_name)
 
 # Question 14: Count consonants in "Hello World"
 print("\nQuestion 14: Count consonants in 'Hello World'")
 # Your code here
+name = input()
+count = ""
+for char in name:
+  if char != " " and char.lower() not in "aeiou":
+    count = count + char
+print(len(count))
 
 # Question 15: Find the longest word in "Python is a programming language"
 print("\nQuestion 15: Find the longest word in 'Python is a programming language'")
 # Your code here
+
 
 # Question 16: Remove all punctuation from "Hello, World! How are you?"
 print("\nQuestion 16: Remove all punctuation from 'Hello, World! How are you?'")
