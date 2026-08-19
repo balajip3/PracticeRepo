@@ -19,43 +19,83 @@ print("-" * 50)
 # Question 1: Reverse the string "Python Programming"
 print("Question 1: Reverse the string 'Python Programming'")
 # Your code here
+name = input()
+reverse_string = name[::-1]
+print(reverse_string)
 
 # Question 2: Check if "racecar" is a palindrome
 print("\nQuestion 2: Check if 'racecar' is a palindrome")
 # Your code here
+name = input()
+reverse_string = name[::-1]
+if name == reverse_string:
+  print("Palindrome")
+else:
+  print("Not a Palindrome")
+  
 
 # Question 3: Count the number of words in "Python is a great programming language"
 print("\nQuestion 3: Count the number of words in 'Python is a great programming language'")
 # Your code here
+name = input()
+words = name.split()
+length = len(words)
+print(length)
 
 # Question 4: Convert "hello world" to title case
 print("\nQuestion 4: Convert 'hello world' to title case")
 # Your code here
+name = input()
+name_title = name.title()
+print(name_title)
 
 # Question 5: Find the length of string "Data Science"
 print("\nQuestion 5: Find the length of string 'Data Science'")
 # Your code here
+name = input()
+length_string = len(name)
+print(length_string)
 
 # Question 6: Replace all spaces with underscores in "Machine Learning"
 print("\nQuestion 6: Replace all spaces with underscores in 'Machine Learning'")
 # Your code here
+name = input()
+replace = name.replace(" ", "_")
+print(replace)
 
 # Question 7: Check if "python" is in "Python Programming Language"
 print("\nQuestion 7: Check if 'python' is in 'Python Programming Language'")
 # Your code here
-
+name = input()
+words = name.split()
+if "Python" in words:
+  print("Yes")
+else:
+  print("No")
+    
 # Question 8: Extract the first 5 characters from "Artificial Intelligence"
 print("\nQuestion 8: Extract the first 5 characters from 'Artificial Intelligence'")
 # Your code here
+name = input()
+characters = name[0:5]
+print(characters)
 
 # Question 9: Convert "UPPERCASE" to lowercase
 print("\nQuestion 9: Convert 'UPPERCASE' to lowercase")
 # Your code here
+name = input()
+lowercase = name.lower()
+print(lowercase)
 
 # Question 10: Remove all vowels from "Computer Science"
 print("\nQuestion 10: Remove all vowels from 'Computer Science'")
 # Your code here
-
+name = input()
+words = "" 
+for i in name:
+  if i.lower() not in "aeiou":
+    words = words + i 
+print(words)
 # Question 11: Find the most frequent character in "mississippi"
 print("\nQuestion 11: Find the most frequent character in 'mississippi'")
 # Your code here
