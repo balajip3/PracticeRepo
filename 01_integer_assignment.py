@@ -18,6 +18,7 @@ print("-" * 50)
 # Question 1: Calculate the product of first 10 natural numbers
 print("Question 1: Calculate the product of first 10 natural numbers")
 # Your code here
+a
 
 # Question 2: Find the remainder when 156 is divided by 7
 print("\nQuestion 2: Find the remainder when 156 is divided by 7")
