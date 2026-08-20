@@ -226,22 +226,54 @@ print(result)
 # Question 26: Check if string ends with "ing": "programming"
 print("\nQuestion 26: Check if string ends with 'ing': 'programming'")
 # Your code here
+name = input()
+result = name.endswith("ing")
+print(result)
 
 # Question 27: Replace first occurrence of 'o' with '0' in "Hello World"
 print("\nQuestion 27: Replace first occurrence of 'o' with '0' in 'Hello World'")
 # Your code here
+name = input()
+result = name.replace("o","0",1)
+print(result)
 
 # Question 28: Find the shortest word in "Python is a programming language"
 print("\nQuestion 28: Find the shortest word in 'Python is a programming language'")
 # Your code here
+name = "Python is a programming language"
+words = name.split()
+
+result = words[0]
+
+for char in words:
+  if len(char) < len(result):
+    result = char 
+print(result)
 
 # Question 29: Count words that start with 'p' in "Python programming is powerful"
 print("\nQuestion 29: Count words that start with 'p' in 'Python programming is powerful'")
 # Your code here
+name = "Python programming is powerful"
+words = name.split()
+
+result = 0 
+
+for char in words:
+  counter = char.startswith("p")
+  if counter == True:
+    result = result + 1 
+print(result)
+                            
+
 
 # Question 30: Reverse words in "Hello World Python"
 print("\nQuestion 30: Reverse words in 'Hello World Python'")
 # Your code here
+name = "Hello World Python"
+words = name.split()
+result = words[::-1]
+final = " ".join(result)
+print(final)
 
 # Question 31: Check if string is a valid email format: "user@example.com"
 print("\nQuestion 31: Check if string is a valid email format: 'user@example.com'")
