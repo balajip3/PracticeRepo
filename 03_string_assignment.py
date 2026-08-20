@@ -279,17 +279,54 @@ print(final)
 print("\nQuestion 31: Check if string is a valid email format: 'user@example.com'")
 # Your code here
 
+
+
 # Question 32: Extract domain from "https://www.example.com/path"
 print("\nQuestion 32: Extract domain from 'https://www.example.com/path'")
 # Your code here
+name = "https://www.example.com/path"
+words = name.split("://") 
+result = name.split("/")
+
+for char in result:
+  if char.startswith("www"):
+    print(char)
+
+     [OR]
+
+name = "https://www.example.com/path"
+result = name.split("://")[1].split("/")[0]
+print(result)
+
+
+
 
 # Question 33: Count lines in multi-line string
 print("\nQuestion 33: Count lines in multi-line string")
 # Your code here
 
+text = """ Wake up with purpose and chase your goals today.
+Push hard because your success depends on your own actions.
+Ignore doubt and trust your inner strength to win.
+Keep moving forward no matter how hard things get."""
+
+result = len(text.splitlines())
+print("Count lines :", result)
+
+
+
 # Question 34: Find common characters between "hello" and "world"
 print("\nQuestion 34: Find common characters between 'hello' and 'world'")
 # Your code here
+first_word = "hello"
+second_word = "world"
+
+result = " "
+
+for char in first_word:
+  if char in b and char not in result:
+    result = result + char 
+print(result)
 
 # Question 35: Check if string is a valid phone number: "+1-555-123-4567"
 print("\nQuestion 35: Check if string is a valid phone number: '+1-555-123-4567'")
@@ -298,14 +335,38 @@ print("\nQuestion 35: Check if string is a valid phone number: '+1-555-123-4567'
 # Question 36: Extract numbers from "abc123def456ghi789"
 print("\nQuestion 36: Extract numbers from 'abc123def456ghi789'")
 # Your code here
+input_name = "abc123def456ghi789"
+
+result = " "
+
+for i in input_name:
+  if i.isdigit():
+    result = result + i 
+print(result)
 
 # Question 37: Convert "snake_case" to "camelCase"
 print("\nQuestion 37: Convert 'snake_case' to 'camelCase'")
 # Your code here
+name = "snake_case"
+
+words = name.split("_")
+print(words)
+
 
 # Question 38: Check if string is a valid palindrome ignoring case: "A man a plan a canal Panama"
 print("\nQuestion 38: Check if string is a valid palindrome ignoring case: 'A man a plan a canal Panama'")
 # Your code here
+word = "A man a plan a canal Panama"
+
+words = word.lower().replace(" ","")
+
+result = words[::-1]
+
+if words == result:
+  print("Valid palindrome")
+else:
+  print("Not a palindrome")
+
 
 # Question 39: Find the most common word in "the quick brown fox jumps over the lazy dog"
 print("\nQuestion 39: Find the most common word in 'the quick brown fox jumps over the lazy dog'")
