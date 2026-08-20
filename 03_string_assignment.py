@@ -134,35 +134,72 @@ print(len(count))
 # Question 15: Find the longest word in "Python is a programming language"
 print("\nQuestion 15: Find the longest word in 'Python is a programming language'")
 # Your code here
+name = input()
+words = name.split() 
+
+longest_word = ""
+
+for char in words:
+  if len(char) > len(longest_word):
+    longest_word = char 
+print(longest_word)
 
 
 # Question 16: Remove all punctuation from "Hello, World! How are you?"
 print("\nQuestion 16: Remove all punctuation from 'Hello, World! How are you?'")
 # Your code here
+name = input()
+result = ""
+
+for char in name:
+  if char.isalpha() or char == " ":
+    result = result + char 
+print(result)
+
 
 # Question 17: Check if string starts with "Python"
 print("\nQuestion 17: Check if string starts with 'Python'")
 # Your code here
+name = input()
+
+result = name.startswith("Python")
+print(result)
 
 # Question 18: Find the index of first occurrence of 'o' in "Hello World"
 print("\nQuestion 18: Find the index of first occurrence of 'o' in 'Hello World'")
 # Your code here
+name = input() 
+result = name.index("o")
+print(result)
 
 # Question 19: Split string "apple,banana,orange" by comma
 print("\nQuestion 19: Split string 'apple,banana,orange' by comma")
 # Your code here
+name = input()
+result = name.split(",")
+print(result)
 
 # Question 20: Join list ['Python', 'is', 'awesome'] with spaces
 print("\nQuestion 20: Join list ['Python', 'is', 'awesome'] with spaces")
 # Your code here
+name = ['Python', 'is', 'awesome']
+result = " ".join(name)
+print(result)
 
 # Question 21: Check if string contains only digits: "12345"
 print("\nQuestion 21: Check if string contains only digits: '12345'")
 # Your code here
+number = input()
+result = number.isnumeric()
+print(result)
+
 
 # Question 22: Check if string contains only letters: "HelloWorld"
 print("\nQuestion 22: Check if string contains only letters: 'HelloWorld'")
 # Your code here
+name = input()
+result = name.isalpha()
+print(result)
 
 # Question 23: Convert "hello world" to "hElLo WoRlD" (alternating case)
 print("\nQuestion 23: Convert 'hello world' to 'hElLo WoRlD' (alternating case)")
@@ -171,10 +208,20 @@ print("\nQuestion 23: Convert 'hello world' to 'hElLo WoRlD' (alternating case)"
 # Question 24: Find all positions of 'a' in "banana"
 print("\nQuestion 24: Find all positions of 'a' in 'banana'")
 # Your code here
+name = "banana"
+result = []
+
+for i in range(len(name)):
+  if name[i] == "a":
+    result.append(i)
+print(result)
 
 # Question 25: Remove leading and trailing whitespace from "  Hello World  "
 print("\nQuestion 25: Remove leading and trailing whitespace from '  Hello World  '")
 # Your code here
+name = " Hello World "
+result = name.strip()
+print(result)
 
 # Question 26: Check if string ends with "ing": "programming"
 print("\nQuestion 26: Check if string ends with 'ing': 'programming'")
