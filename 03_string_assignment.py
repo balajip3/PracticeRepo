@@ -372,9 +372,33 @@ else:
 print("\nQuestion 39: Find the most common word in 'the quick brown fox jumps over the lazy dog'")
 # Your code here
 
+name = "the quick brown fox jumps over the lazy dog"
+
+words = name.split()
+count = {}
+
+for word in words:
+  if word in count:
+    count[word] = count[word] + 1 
+  else:
+    count[word] = 1 
+most_common_word = max(count, key=count.get)
+print("Words counts :", count)
+print("Most common word :", most_common_word)
+
 # Question 40: Generate acronym from "National Aeronautics and Space Administration"
 print("\nQuestion 40: Generate acronym from 'National Aeronautics and Space Administration'")
 # Your code here
+
+name = "National Aeronautics and Space Administration"
+
+words = name.split()
+result = ""
+
+for char in words:
+  if char[0].isupper():
+    result = result + char[0]
+print(result)
 
 # Question 41: Check if string contains balanced parentheses: "((()))"
 print("\nQuestion 41: Check if string contains balanced parentheses: '((()))'")
