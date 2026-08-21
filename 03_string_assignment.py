@@ -100,6 +100,24 @@ print(words)
 print("\nQuestion 11: Find the most frequent character in 'mississippi'")
 # Your code here
 
+word = "mississippi"
+
+max_char = " "
+max_count = 0
+
+for i in range(len(word)):
+  char = a[i]
+  count = 0 
+
+  for j in range(len(word)):
+    if a[j] == char:
+      count = count + 1 
+  if count > max_count:
+    max_count = count 
+    max_char = char
+print("Most frequent :", max_char)
+print("Count :", max_count)
+
 # Question 12: Check if two strings are anagrams: "listen" and "silent"
 print("\nQuestion 12: Check if two strings are anagrams: 'listen' and 'silent'")
 # Your code here
@@ -204,6 +222,23 @@ print(result)
 # Question 23: Convert "hello world" to "hElLo WoRlD" (alternating case)
 print("\nQuestion 23: Convert 'hello world' to 'hElLo WoRlD' (alternating case)")
 # Your code here
+word = "hello world"
+
+result = ""
+count = 0 
+
+for i in range(len(word)):
+  if word[i] == " ":
+    result = result + " "
+  else:
+    if count % 2 ==0:
+      even = word[i].lower()
+      result = result + even
+    else:
+      odd = word[i].upper()
+      result = result + odd 
+    count = count + 1
+print(result)
 
 # Question 24: Find all positions of 'a' in "banana"
 print("\nQuestion 24: Find all positions of 'a' in 'banana'")
@@ -278,7 +313,21 @@ print(final)
 # Question 31: Check if string is a valid email format: "user@example.com"
 print("\nQuestion 31: Check if string is a valid email format: 'user@example.com'")
 # Your code here
+email = "user@example.com"
 
+if email.count("@") == 1 and "." in email.split("@")[1] and " " not in email:
+
+  user, domain = email.split("@")
+  if user and domain and not domain.startswith(".") and not domain.endswith("."):
+    print("Valid Email")
+  else:
+    print("Invalid Email")
+else:
+  print("Invalid Email")
+    
+
+
+  
 
 
 # Question 32: Extract domain from "https://www.example.com/path"
@@ -331,6 +380,17 @@ print(result)
 # Question 35: Check if string is a valid phone number: "+1-555-123-4567"
 print("\nQuestion 35: Check if string is a valid phone number: '+1-555-123-4567'")
 # Your code here
+
+phone = "+1-555-123-4567"
+parts = phone.split("-")
+
+if len(phone) == 15 and phone[2] == "-" and phone[6] == "-" and phone[10] == "-":
+  if parts[0][1:].isdigit() and parts[1].isdigit() and parts[2].isdigit() and parts[3].isdigit():
+    print("Valid Number")
+  else:
+    print("Invalid Number")
+else:
+  print("Invalid Number")
 
 # Question 36: Extract numbers from "abc123def456ghi789"
 print("\nQuestion 36: Extract numbers from 'abc123def456ghi789'")
@@ -425,6 +485,20 @@ else:
 # Question 42: Convert "hello world" to Morse code
 print("\nQuestion 42: Convert 'hello world' to Morse code")
 # Your code here
+word = "hello world"
+
+morse_dict = {
+    "a": ".-", "b": "-...", "c": "-.-.", "d": "-..", "e": ".", "f": "..-.", "g": "--.",
+    "h": "....", "i": "..", "j": ".---", "k": "-.-", "l": ".-..", "m": "--", "n": "-.",
+    "o": "---", "p": ".--.", "q": "--.-", "r": ".-.", "s": "...", "t": "-", "u": "..-",
+    "v": "...-", "w": ".--", "x": "-..-", "y": "-.--", "z": "--..", " ":"/"
+}
+
+result = ""
+
+for char in word.lower():
+  result = result + morse_dict[char] + " " 
+print(result)
 
 # Question 43: Find the longest common substring between "programming" and "grammar"
 print("\nQuestion 43: Find the longest common substring between 'programming' and 'grammar'")
@@ -483,10 +557,38 @@ print(result.strip())
 # Question 46: Convert "hello world" to Pig Latin
 print("\nQuestion 46: Convert 'hello world' to Pig Latin")
 # Your code here
+name = "hello world"
+words = name.split()
+
+result = ""
+
+for i in words:
+  pig = i[1:] + i[0] + "ay" 
+  result = result + pig + " " 
+print(result)
+
+
 
 # Question 47: Check if string is a valid IPv4 address: "192.168.1.1"
 print("\nQuestion 47: Check if string is a valid IPv4 address: '192.168.1.1'")
 # Your code here
+ip = "192.168.1.1"
+
+parts = ip.split(".")
+
+valid = True 
+if len(parts) != 4:
+  valid = False
+else:
+  for p in parts:
+    if not p.isdigit():
+      valid = False
+    elif not 0 <= int(p) <= 255:
+      valid = False
+    elif p != str(int(p)):
+      valid = False 
+print("Valid IPv4" if valid else "Invalid Ipv4")
+
 
 # Question 48: Find all substrings of "abc"
 print("\nQuestion 48: Find all substrings of 'abc'")
@@ -504,6 +606,37 @@ print(substring)
 print("\nQuestion 49: Convert 'hello world' to ROT13 encoding")
 # Your code here
 
+word = "hello world"
+
+result = ""
+
+for char in word:
+  if 'a' <= char <= 'z':
+    result += chr((ord(char) - ord('a') + 13) % 26 + ord('a'))
+  elif 'A' <= char <= 'Z':
+    result += chr(ord(char) - ord('A') + 13) % 26 + ord('A'))
+  else:
+    result += char
+print(result)
+                 
+    
+
 # Question 50: Check if string is a valid credit card number: "4532015112830366"
 print("\nQuestion 50: Check if string is a valid credit card number: '4532015112830366'")
 # Your code here 
+card = "4532015112830366"
+
+total = 0
+reverse = card[::-1]
+
+for i in range(len(reverse)):
+  digit = int(reverse[i])
+  if i%2 == 1 :
+    digit = digit * 2 
+    if digit > 9:
+      digit = digit - 9 
+  total = total + digit 
+if total % 10 == 0:
+  print("Valid Credit Card")
+else:
+  print("Invalid Credit Card")
