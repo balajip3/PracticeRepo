@@ -403,6 +403,24 @@ print(result)
 # Question 41: Check if string contains balanced parentheses: "((()))"
 print("\nQuestion 41: Check if string contains balanced parentheses: '((()))'")
 # Your code here
+string = "((()))"
+
+count = 0 
+balanced = True 
+for i in string:
+  if i == "(":
+    count = count + 1 
+  elif i == ")":
+    count = count - 1 
+  if count < 0:
+    balanced = False
+    break 
+
+if balanced  and count == 0:
+  print("Balanced")
+else:
+  print("Unbalanced")
+    
 
 # Question 42: Convert "hello world" to Morse code
 print("\nQuestion 42: Convert 'hello world' to Morse code")
@@ -411,14 +429,56 @@ print("\nQuestion 42: Convert 'hello world' to Morse code")
 # Question 43: Find the longest common substring between "programming" and "grammar"
 print("\nQuestion 43: Find the longest common substring between 'programming' and 'grammar'")
 # Your code here
+first_name = "programming"
+second_name = "grammar"
+
+longest = ""
+
+for i in range (len(first_name)):
+  for j in range(i+1, len(a)+1):
+    sub = a[i:j]
+
+    if sub in b and len(sub) > len(longest):
+      longest = sub
+print("Longest Common Substring :", longest)
+
 
 # Question 44: Check if string is a valid URL: "https://www.google.com"
 print("\nQuestion 44: Check if string is a valid URL: 'https://www.google.com'")
 # Your code here
+url = "'https://www.google.com"
+
+is_valid = False
+
+if url.startswith("https://") or url.startswith("http://"):
+  if url.startswith("https://"):
+    domain_part = url[8:]
+  else:
+    domain_part = url[7:]
+
+if "." in domain_part and " " not in url:
+  is_valid = True 
+if is_valid:
+  print("Valid URL")
+else:
+  print("Invalid URL")
+
+                                                
 
 # Question 45: Extract all words with length > 5 from "Python programming is amazing and powerful"
 print("\nQuestion 45: Extract all words with length > 5 from 'Python programming is amazing and powerful'")
 # Your code here
+name = "Python programming is amazing and powerful"
+
+words = name.split()
+
+result = ""
+
+for i in words:
+  if len(i) > 5:
+    result = result + i + " " 
+print(result.strip())
+    
 
 # Question 46: Convert "hello world" to Pig Latin
 print("\nQuestion 46: Convert 'hello world' to Pig Latin")
@@ -431,6 +491,14 @@ print("\nQuestion 47: Check if string is a valid IPv4 address: '192.168.1.1'")
 # Question 48: Find all substrings of "abc"
 print("\nQuestion 48: Find all substrings of 'abc'")
 # Your code here
+a = "abc"
+
+substring = []
+
+for i in range(len(a)):
+  for j in range(i+1, len(a)+1):
+    substring.append(a[i:j])
+print(substring)
 
 # Question 49: Convert "hello world" to ROT13 encoding
 print("\nQuestion 49: Convert 'hello world' to ROT13 encoding")
