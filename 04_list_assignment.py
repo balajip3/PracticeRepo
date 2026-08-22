@@ -24,6 +24,7 @@ print("Question 1: Create a list of first 10 square numbers")
 square_numbers = []
 for i in range(1,11):
   result = int(i*i)
+  
   square_numbers.append(result)
 print("First 10 square numbers :",square_numbers)
 
@@ -404,70 +405,184 @@ for i in a:
 print("\nQuestion 33: Create a nested list with different levels: [1, [2, 3], [4, [5, 6]], 7]")
 # Your code here
 
+a = [1, [2, 3], [4, [5, 6]], 7]
+print(a)
+
+
 # Question 34: Count the depth of nesting in [1, [2, 3], [4, [5, 6]], 7]
 print("\nQuestion 34: Count the depth of nesting in [1, [2, 3], [4, [5, 6]], 7]")
 # Your code here
+a = [1, [2, 3], [4, [5, 6]], 7]
+
+depth = 1 
+
+for i in a:
+  if isinstance(i,list):
+    if depth < 2:
+      depth = 2 
+
+    for sub in i:
+      if isinstance(sub, list):
+        if depth < 3:
+          depth = 3 
+print(depth)
+
 
 # Question 35: Create a list of functions: [len, str, int, float]
 print("\nQuestion 35: Create a list of functions: [len, str, int, float]")
 # Your code here
 
+a = [len, str, int, float]
+
+print(a)
+
 # Question 36: Apply each function in list to string "123"
 print("\nQuestion 36: Apply each function in list to string '123'")
 # Your code here
+
+a = [len, str, int, float]
+
+for i in a:
+  print(i("1234"))
 
 # Question 37: Create a list of lambda functions: [lambda x: x*2, lambda x: x**2, lambda x: x+1]
 print("\nQuestion 37: Create a list of lambda functions: [lambda x: x*2, lambda x: x**2, lambda x: x+1]")
 # Your code here
 
+a = [lambda x: x*2, lambda x: x**2, lambda x: x+1]
+
+print(a) 
+
+
 # Question 38: Apply each lambda function to 5
 print("\nQuestion 38: Apply each lambda function to 5")
 # Your code here
+
+a = [lambda x: x*2, lambda x: x**2, lambda x: x+1]
+
+for i in a:
+  print(i(5))
+
+
 
 # Question 39: Create a list of classes: [list, dict, set, tuple]
 print("\nQuestion 39: Create a list of classes: [list, dict, set, tuple]")
 # Your code here
 
+a = [list, dict, set, tuple]
+print(a)
+
 # Question 40: Create instances of each class in list
 print("\nQuestion 40: Create instances of each class in list")
 # Your code here
+
+a = [list, dict, set, tuple]
+for i in a:
+  if i == dict:
+    instance = i()
+  else:
+    instance = i([1,2,3])
+  print(instance)
 
 # Question 41: Create a list of None values: [None, None, None, None]
 print("\nQuestion 41: Create a list of None values: [None, None, None, None]")
 # Your code here
 
+a = [None, None, None, None]
+print(a)
+
 # Question 42: Replace all None values with 0 in list
 print("\nQuestion 42: Replace all None values with 0 in list")
 # Your code here
+
+a = [None, None, None, None]
+
+for i in range(len(a)):
+  if a[i] is None:
+    a[i] = 0 
+print(a)
+
+
 
 # Question 43: Create a list of boolean values: [True, False, True, False]
 print("\nQuestion 43: Create a list of boolean values: [True, False, True, False]")
 # Your code here
 
+a = [True, False, True, False]
+print(a)
+
 # Question 44: Count True values in boolean list
 print("\nQuestion 44: Count True values in boolean list")
 # Your code here
+
+a = [True, False, True, False]
+print(a.count(True))
+
+       [OR]
+
+a = [True, False, True, False]
+
+count = 0 
+
+for i in a:
+  if i == True:
+    count = count + 1
+print(count)
+
 
 # Question 45: Create a list of ranges: [range(3), range(5), range(2)]
 print("\nQuestion 45: Create a list of ranges: [range(3), range(5), range(2)]")
 # Your code here
 
+a = [range(3), range(5), range(2)]
+print(a)
+
+
 # Question 46: Convert each range to list
 print("\nQuestion 46: Convert each range to list")
 # Your code here
+
+a = [range(3), range(5), range(2)]
+
+result = []
+
+for i in a:
+  result.append(list(i))
+print(result)
 
 # Question 47: Create a list of generators: [(x for x in range(3)), (x for x in range(5))]
 print("\nQuestion 47: Create a list of generators: [(x for x in range(3)), (x for x in range(5))]")
 # Your code here
 
+a = [(x for x in range(3)), (x for x in range(5))]
+
+print(a)
+
+
 # Question 48: Convert each generator to list
 print("\nQuestion 48: Convert each generator to list")
 # Your code here
+
+a = [(x for x in range(3)), (x for x in range(5))]
+
+b = [list(x) for x in a]
+print(b)
 
 # Question 49: Create a list of iterators: [iter([1, 2, 3]), iter([4, 5, 6])]
 print("\nQuestion 49: Create a list of iterators: [iter([1, 2, 3]), iter([4, 5, 6])]")
 # Your code here
 
+a = [iter([1, 2, 3]), iter([4, 5, 6])]
+print(a)
+
 # Question 50: Extract all elements from each iterator
 print("\nQuestion 50: Extract all elements from each iterator")
 # Your code here 
+
+a = [iter([1, 2, 3]), iter([4, 5, 6])]
+
+result = []
+
+for i in a:
+  result.append(list(i))
+print(result)
