@@ -277,49 +277,128 @@ print(a)
 print("\nQuestion 21: Find the length of each string in ['apple', 'banana', 'cherry', 'date']")
 # Your code here
 
+a = ['apple', 'banana', 'cherry', 'date']
+
+result = [] 
+for i in a:
+  result.append(len(i))
+print(result)
+
 # Question 22: Create a list of tuples: [(1, 'a'), (2, 'b'), (3, 'c')]
 print("\nQuestion 22: Create a list of tuples: [(1, 'a'), (2, 'b'), (3, 'c')]")
 # Your code here
+
+a = [(1, 'a'), (2, 'b'), (3, 'c')]
+print(a)
 
 # Question 23: Extract first element from each tuple in [(1, 'a'), (2, 'b'), (3, 'c')]
 print("\nQuestion 23: Extract first element from each tuple in [(1, 'a'), (2, 'b'), (3, 'c')]")
 # Your code here
 
+a = [(1, 'a'), (2, 'b'), (3, 'c')]
+
+result = []
+for i in a:
+  result.append(i[0])
+print(result)
+
 # Question 24: Create a list of dictionaries: [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
 print("\nQuestion 24: Create a list of dictionaries: [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]")
 # Your code here
+
+a = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}] 
+print(a) 
+
 
 # Question 25: Extract all 'name' values from list of dictionaries
 print("\nQuestion 25: Extract all 'name' values from list of dictionaries")
 # Your code here
 
+a = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+result = []
+
+for i in a:
+  result.append(i["name"])
+print(result)
+
 # Question 26: Find the person with maximum age in list of dictionaries
 print("\nQuestion 26: Find the person with maximum age in list of dictionaries")
 # Your code here
+
+a = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}]
+result = a[0]
+
+for i in a:
+  if i["age"] > result["age"]:
+    result = i 
+print(result)
 
 # Question 27: Create a 4D list: [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]
 print("\nQuestion 27: Create a 4D list: [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]")
 # Your code here
 
+a = [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]
+
+print(a)
+
+
 # Question 28: Find the maximum value in 4D list
 print("\nQuestion 28: Find the maximum value in 4D list")
 # Your code here
+
+a = [[[[1, 2], [3, 4]], [[5, 6], [7, 8]]], [[[9, 10], [11, 12]], [[13, 14], [15, 16]]]]
+
+result = 0 
+
+for i in a:
+  for j in i:
+    for num in j:
+      for maximum in num:
+        if maximum > result:
+          result = maximum 
+print(result)
 
 # Question 29: Create a list of sets: [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
 print("\nQuestion 29: Create a list of sets: [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]")
 # Your code here
 
+a = [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
+print(a)
+
 # Question 30: Find the union of all sets in list of sets
 print("\nQuestion 30: Find the union of all sets in list of sets")
 # Your code here
+
+a = [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
+
+b = set()
+
+for i in a:
+  for j in i:
+    b.add(j)
+print(b)
 
 # Question 31: Create a list of complex numbers: [1+2j, 3+4j, 5+6j]
 print("\nQuestion 31: Create a list of complex numbers: [1+2j, 3+4j, 5+6j]")
 # Your code here
 
+a = [1+2j, 3+4j, 5+6j]
+print(a)
+
+
 # Question 32: Find the magnitude of each complex number in list
 print("\nQuestion 32: Find the magnitude of each complex number in list")
 # Your code here
+
+a = [1+2j, 3+4j, 5+6j]
+
+for i in a:
+  real = i.real
+  image = i.imag 
+  result = (real * real  + image * image ) ** 0.5 
+  print(result)
+
+
 
 # Question 33: Create a nested list with different levels: [1, [2, 3], [4, [5, 6]], 7]
 print("\nQuestion 33: Create a nested list with different levels: [1, [2, 3], [4, [5, 6]], 7]")
