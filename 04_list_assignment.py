@@ -133,41 +133,145 @@ print(a)
 print("\nQuestion 11: Flatten nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
 # Your code here
 
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+result = []
+
+for i in a:
+  if type(i) == list:
+    for x in i:
+      result.append(x)
+  else:
+    result.append(i)
+print(result)
+
+
 # Question 12: Find common elements between [1, 2, 3, 4, 5] and [4, 5, 6, 7, 8]
 print("\nQuestion 12: Find common elements between [1, 2, 3, 4, 5] and [4, 5, 6, 7, 8]")
 # Your code here
+
+a = [1,2,3,4,5]
+
+b = [4,5,6,7,8]
+
+result = []
+
+for i in a:
+  if i in b:
+    result.append(i)
+print(result)
+
+
 
 # Question 13: Create a list of lists: [[1, 2], [3, 4], [5, 6]]
 print("\nQuestion 13: Create a list of lists: [[1, 2], [3, 4], [5, 6]]")
 # Your code here
 
+a = [1,2,3,4,5,6]
+
+result = [] 
+
+for i in range(0,len(a),2):
+  result.append([a[i], a[i+1]])
+print(result)
+
+
 # Question 14: Find the sum of each sublist in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print("\nQuestion 14: Find the sum of each sublist in [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
 # Your code here
+
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for i in a:
+  print(sum(i))
+
+       [OR] 
+
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for i in a:
+  total = 0 
+  for num in i:
+    total = total + num 
+  print(total)
+
 
 # Question 15: Transpose the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print("\nQuestion 15: Transpose the matrix [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
 # Your code here
 
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+result = []
+
+for i in range(3):
+  new_row = []
+  for j in range(3):
+    new_row.append(a[i][j])
+  result.append(new_row)
+print(result)
+                  
+
 # Question 16: Find the maximum value in each sublist of [[1, 5, 3], [9, 2, 7], [4, 8, 6]]
 print("\nQuestion 16: Find the maximum value in each sublist of [[1, 5, 3], [9, 2, 7], [4, 8, 6]]")
 # Your code here
+
+a = [[1, 5, 3], [9, 2, 7], [4, 8, 6]]
+
+for i in a:
+  print("Maximum value in each sublist :", max(i))
 
 # Question 17: Create a 3D list: [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
 print("\nQuestion 17: Create a 3D list: [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]")
 # Your code here
 
+a = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+for i in a:
+  for j in i:
+    for num in j:
+      print(num, end=" ")
+    print()
+  print("---")
+
+
 # Question 18: Find the sum of all elements in 3D list [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
 print("\nQuestion 18: Find the sum of all elements in 3D list [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]")
 # Your code here
+
+a = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]
+
+total = 0 
+
+for i in a:
+  for j in i:
+    for num in j:
+      total = total + num 
+print("sum of all elements :", total)
+
+
+
 
 # Question 19: Extract all even numbers from nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print("\nQuestion 19: Extract all even numbers from nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
 # Your code here
 
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+result = []
+for i in a:
+  for j in i:
+    if j%2 == 0:
+      result.append(j)
+print(result)
+
+
 # Question 20: Create a list of mixed data types: [1, "hello", 3.14, True, [1, 2, 3]]
 print("\nQuestion 20: Create a list of mixed data types: [1, 'hello', 3.14, True, [1, 2, 3]]")
 # Your code here
+
+a = [1, 'hello', 3.14, True, [1, 2, 3]]
+print(a)
 
 # Question 21: Find the length of each string in ["apple", "banana", "cherry", "date"]
 print("\nQuestion 21: Find the length of each string in ['apple', 'banana', 'cherry', 'date']")
