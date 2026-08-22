@@ -21,41 +21,113 @@ print("-" * 50)
 print("Question 1: Create a list of first 10 square numbers")
 # Your code here
 
+square_numbers = []
+for i in range(1,11):
+  result = int(i*i)
+  square_numbers.append(result)
+print("First 10 square numbers :",square_numbers)
+
 # Question 2: Find the sum of all even numbers in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print("\nQuestion 2: Find the sum of all even numbers in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]")
 # Your code here
+
+a = [1,2,3,4,5,6,7,8,9,10]
+
+sum = 0 
+
+for i in a:
+  if i%2 == 0:
+    sum = sum + i 
+print(sum)
 
 # Question 3: Remove duplicates from [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]
 print("\nQuestion 3: Remove duplicates from [1, 2, 2, 3, 4, 4, 5, 6, 6, 7]")
 # Your code here
 
+a = [1,2,2,3,4,4,5,6,6,7]
+b = set(a)
+c = list(b)
+print(c)
+
 # Question 4: Sort the list [64, 34, 25, 12, 22, 11, 90] in descending order
 print("\nQuestion 4: Sort the list [64, 34, 25, 12, 22, 11, 90] in descending order")
 # Your code here
+
+a = [64,34,25,12,22,11,90]
+
+a.sort(reverse = True)
+print(a)
 
 # Question 5: Find the average of numbers in [15, 23, 31, 42, 56, 78, 91]
 print("\nQuestion 5: Find the average of numbers in [15, 23, 31, 42, 56, 78, 91]")
 # Your code here
 
+a = [15,23,31,42,56,78,91]
+
+length = len(a)
+
+sum = 0 
+
+for i in a:
+  sum = sum + i 
+print(sum/length)
+
+
 # Question 6: Create a list of first 15 Fibonacci numbers
 print("\nQuestion 6: Create a list of first 15 Fibonacci numbers")
 # Your code here
+
+result = [0,1]
+
+for i in range(13):
+  next_num = result[-1] + result[-2]
+  result.append(next_num)
+print(result)
 
 # Question 7: Find the second largest number in [45, 67, 23, 89, 12, 34, 78]
 print("\nQuestion 7: Find the second largest number in [45, 67, 23, 89, 12, 34, 78]")
 # Your code here
 
+a = [45,67,23,89,12,34,78]
+a.sort(reverse = True)
+print("second largest number :", a[1])
+
 # Question 8: Reverse the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print("\nQuestion 8: Reverse the list [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]")
 # Your code here
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a.reverse()
+print(a)
 
 # Question 9: Count how many times 5 appears in [1, 5, 2, 5, 3, 5, 4, 5, 6]
 print("\nQuestion 9: Count how many times 5 appears in [1, 5, 2, 5, 3, 5, 4, 5, 6]")
 # Your code here
 
+a = [1,5,2,5,3,5,4,5,6]
+
+print(a.count(5))
+
+
+
 # Question 10: Create a list of prime numbers between 1 and 50
 print("\nQuestion 10: Create a list of prime numbers between 1 and 50")
 # Your code here
+
+a = []
+
+for i in range(1,51):
+  if i < 2:
+    continue 
+  is_valid = True 
+  for j in range(2,i):
+    if (i%j == 0):
+      is_valid = False
+      break
+  if is_valid:
+    a.append(i)
+print(a)
+    
 
 # Question 11: Flatten nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print("\nQuestion 11: Flatten nested list [[1, 2, 3], [4, 5, 6], [7, 8, 9]]")
