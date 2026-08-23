@@ -23,38 +23,100 @@ print("-" * 50)
 print("Question 1: Create a tuple of first 10 natural numbers")
 # Your code here
 
+a = 10 
+result = 0
+
+for i in range(1,a+1):
+    result = result + (i,)
+print(result)
+    
+
 # Question 2: Find the length of tuple (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 print("\nQuestion 2: Find the length of tuple (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)")
 # Your code here
+
+a = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) 
+
+length = len(a)
+
+print(length)
 
 # Question 3: Access the 3rd element from tuple ('a', 'b', 'c', 'd', 'e')
 print("\nQuestion 3: Access the 3rd element from tuple ('a', 'b', 'c', 'd', 'e')")
 # Your code here
 
+a = ('a', 'b', 'c', 'd', 'e') 
+
+print(a[2])
+
+
 # Question 4: Find the maximum value in tuple (23, 45, 12, 67, 34, 89, 56)
 print("\nQuestion 4: Find the maximum value in tuple (23, 45, 12, 67, 34, 89, 56)")
 # Your code here
+
+a = (23, 45, 12, 67, 34, 89, 56)
+
+print(max(a))
 
 # Question 5: Count how many times 5 appears in (1, 5, 2, 5, 3, 5, 4, 5, 6)
 print("\nQuestion 5: Count how many times 5 appears in (1, 5, 2, 5, 3, 5, 4, 5, 6)")
 # Your code here
 
+a = (1, 5, 2, 5, 3, 5, 4, 5, 6) 
+b = a.count(5)
+
+print(b)
+
 # Question 6: Create a tuple of mixed data types (integer, float, string, boolean)
 print("\nQuestion 6: Create a tuple of mixed data types (integer, float, string, boolean)")
 # Your code here
+
+a = (1,2,3.2,"balaji",True)
+print(a)
+
 
 # Question 7: Find the index of element 'python' in ('java', 'python', 'c++', 'javascript')
 print("\nQuestion 7: Find the index of element 'python' in ('java', 'python', 'c++', 'javascript')")
 # Your code here
 
+a = ('java', 'python', 'c++', 'javascript')
+
+print(a.index("python"))
+
+
 # Question 8: Check if 25 exists in tuple (10, 20, 30, 40, 50)
 print("\nQuestion 8: Check if 25 exists in tuple (10, 20, 30, 40, 50)")
 # Your code here
+
+a = (10, 20, 30, 40, 50)
+
+if 25 in a:
+    print("True")
+else:
+    print("False")
 
 # Question 9: Create a tuple of first 5 even numbers
 print("\nQuestion 9: Create a tuple of first 5 even numbers")
 # Your code here
 
+a = 10 
+
+result = ()
+
+for i in range(1,a+1):
+    if i%2 == 0:
+        result = result + (i,)
+print(result)
+
 # Question 10: Find the average of numbers in tuple (15, 23, 31, 42, 56, 78)
 print("\nQuestion 10: Find the average of numbers in tuple (15, 23, 31, 42, 56, 78)")
 # Your code here 
+
+a = (15, 23, 31, 42, 56, 78) 
+
+sum = 0 
+
+for i in a:
+    sum = sum + i
+print(sum/len(a))
+
