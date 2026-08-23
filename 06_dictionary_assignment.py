@@ -21,81 +21,199 @@ print("-" * 50)
 print("Question 1: Create a dictionary of student names and their ages")
 # Your code here
 
+students = {
+  "Balaji" : 26,
+  "Raju" : 28,
+  "Ramu" : 23
+}
+
+print(students)
+
 # Question 2: Add a new key-value pair to dictionary {'a': 1, 'b': 2, 'c': 3}
 print("\nQuestion 2: Add a new key-value pair to dictionary {'a': 1, 'b': 2, 'c': 3}")
 # Your code here
+
+my_dict = {
+  "a" : 1,
+  "b" : 2,
+  "c" : 3
+}
+
+my_dict["d"] = 4 
+print(my_dict)
+
 
 # Question 3: Get all keys from dictionary {'name': 'John', 'age': 25, 'city': 'New York'}
 print("\nQuestion 3: Get all keys from dictionary {'name': 'John', 'age': 25, 'city': 'New York'}")
 # Your code here
 
+a = {'name': 'John', 'age': 25, 'city': 'New York'}
+
+print(a.keys())
+
+
+
+
 # Question 4: Get all values from dictionary {'python': 3, 'java': 2, 'c++': 1}
 print("\nQuestion 4: Get all values from dictionary {'python': 3, 'java': 2, 'c++': 1}")
 # Your code here
+
+a = {'python': 3, 'java': 2, 'c++': 1}
+
+print(a.values())
 
 # Question 5: Check if key 'age' exists in {'name': 'Alice', 'age': 30, 'city': 'London'}
 print("\nQuestion 5: Check if key 'age' exists in {'name': 'Alice', 'age': 30, 'city': 'London'}")
 # Your code here
 
+a = {'name': 'Alice', 'age': 30, 'city': 'London'}
+
+if "age" in a:
+  print("key is available")
+else:
+  print("key is not available")
+
+
 # Question 6: Remove key 'temp' from {'a': 1, 'b': 2, 'temp': 3, 'c': 4}
 print("\nQuestion 6: Remove key 'temp' from {'a': 1, 'b': 2, 'temp': 3, 'c': 4}")
 # Your code here
+
+a = {'a': 1, 'b': 2, 'temp': 3, 'c': 4}
+
+del a["temp"]
+print(a)
 
 # Question 7: Find the sum of all values in {'math': 85, 'science': 92, 'english': 78}
 print("\nQuestion 7: Find the sum of all values in {'math': 85, 'science': 92, 'english': 78}")
 # Your code here
 
+a = {'math': 85, 'science': 92, 'english': 78}
+
+b = a.values()
+
+print(sum(b))
+
 # Question 8: Create a dictionary with squares of numbers 1 to 5
 print("\nQuestion 8: Create a dictionary with squares of numbers 1 to 5")
 # Your code here
+
+a = {} 
+
+for i in range(1,6):
+  a[i] = i * i 
+print(a)
 
 # Question 9: Count frequency of each character in string "hello"
 print("\nQuestion 9: Count frequency of each character in string 'hello'")
 # Your code here
 
+a = "hello"
+
+b = {}
+
+for i in a:
+  b[i] = a.count(i)
+print(b)
+
 # Question 10: Merge two dictionaries {'a': 1, 'b': 2} and {'c': 3, 'd': 4}
 print("\nQuestion 10: Merge two dictionaries {'a': 1, 'b': 2} and {'c': 3, 'd': 4}")
 # Your code here
+
+a = {'a': 1, 'b': 2}
+
+b = {'c': 3, 'd': 4}
+
+print(a | b)
 
 # Question 11: Create a nested dictionary: {'person': {'name': 'Alice', 'age': 25}}
 print("\nQuestion 11: Create a nested dictionary: {'person': {'name': 'Alice', 'age': 25}}")
 # Your code here
 
+a = {'person': {'name': 'Alice', 'age': 25}}
+
+print(a)
+
 # Question 12: Access nested value 'name' from {'person': {'name': 'Alice', 'age': 25}}
 print("\nQuestion 12: Access nested value 'name' from {'person': {'name': 'Alice', 'age': 25}}")
 # Your code here
+
+a = {'person': {'name': 'Alice', 'age': 25}}
+
+b = a["person"]["name"]
+
+print(b)
 
 # Question 13: Create a dictionary with list values: {'fruits': ['apple', 'banana'], 'colors': ['red', 'blue']}
 print("\nQuestion 13: Create a dictionary with list values: {'fruits': ['apple', 'banana'], 'colors': ['red', 'blue']}")
 # Your code here
 
+a = {'fruits': ['apple', 'banana'], 'colors': ['red', 'blue']}
+
+print(a)
+
 # Question 14: Add 'orange' to the 'fruits' list in nested dictionary
 print("\nQuestion 14: Add 'orange' to the 'fruits' list in nested dictionary")
 # Your code here
+
+a = {'fruits': ['apple', 'banana'], 'colors': ['red', 'blue']}
+a["fruits"].append("orange")
+print(a)
 
 # Question 15: Create a dictionary with tuple values: {'coordinates': (10, 20), 'rgb': (255, 0, 0)}
 print("\nQuestion 15: Create a dictionary with tuple values: {'coordinates': (10, 20), 'rgb': (255, 0, 0)}")
 # Your code here
 
+a = {'coordinates': (10, 20), 'rgb': (255, 0, 0)}
+print(a)
+
 # Question 16: Extract first coordinate from nested tuple
 print("\nQuestion 16: Extract first coordinate from nested tuple")
 # Your code here
+
+a = {'coordinates': (10, 20), 'rgb': (255, 0, 0)} 
+
+b = a["coordinates"]
+
+print(b[0])
 
 # Question 17: Create a dictionary with set values: {'vowels': {'a', 'e', 'i'}, 'consonants': {'b', 'c', 'd'}}
 print("\nQuestion 17: Create a dictionary with set values: {'vowels': {'a', 'e', 'i'}, 'consonants': {'b', 'c', 'd'}}")
 # Your code here
 
+a = {'vowels': {'a', 'e', 'i'}, 'consonants': {'b', 'c', 'd'}}
+
+print(a)
+
 # Question 18: Add 'o' to vowels set in nested dictionary
 print("\nQuestion 18: Add 'o' to vowels set in nested dictionary")
 # Your code here
+
+a = {'vowels': {'a', 'e', 'i'}, 'consonants': {'b', 'c', 'd'}}
+
+a["vowels"].add("o")
+
+print(a)
+
+                
 
 # Question 19: Create a 3-level nested dictionary: {'company': {'department': {'employee': {'name': 'John', 'id': 123}}}}
 print("\nQuestion 19: Create a 3-level nested dictionary: {'company': {'department': {'employee': {'name': 'John', 'id': 123}}}}")
 # Your code here
 
+a = {'company': {'department': {'employee': {'name': 'John', 'id': 123}}}}
+
+print(a)
+
+
 # Question 20: Access employee name from 3-level nested dictionary
 print("\nQuestion 20: Access employee name from 3-level nested dictionary")
 # Your code here
+
+a = {'company': {'department': {'employee': {'name': 'John', 'id': 123}}}}
+
+b = a["company"]["department"]["employee"]["name"]
+
+print(b)
 
 # Question 21: Create a dictionary with mixed data types: {'int': 42, 'float': 3.14, 'str': 'hello', 'bool': True}
 print("\nQuestion 21: Create a dictionary with mixed data types: {'int': 42, 'float': 3.14, 'str': 'hello', 'bool': True}")
