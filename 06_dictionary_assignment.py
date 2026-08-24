@@ -220,29 +220,71 @@ print(b)
 print("\nQuestion 21: Create a dictionary with mixed data types: {'int': 42, 'float': 3.14, 'str': 'hello', 'bool': True}")
 # Your code here
 
+a = {'int': 42, 'float': 3.14, 'str': 'hello', 'bool': True}
+
+print(a)
+
+
 # Question 22: Check data type of each value in mixed dictionary
 print("\nQuestion 22: Check data type of each value in mixed dictionary")
 # Your code here
+
+a = {'int': 42, 'float': 3.14, 'str': 'hello', 'bool': True}
+
+b = a.values()
+
+for i in b:
+  print(type(i))
+
 
 # Question 23: Create a dictionary with function values: {'len': len, 'str': str, 'int': int}
 print("\nQuestion 23: Create a dictionary with function values: {'len': len, 'str': str, 'int': int}")
 # Your code here
 
+a = {'len': len, 'str': str, 'int': int}
+
+b = a.values()
+
+for i in a:
+  print(i)
+
 # Question 24: Apply each function to "123" using dictionary
 print("\nQuestion 24: Apply each function to '123' using dictionary")
 # Your code here
+
+a = {'len': len, 'str': str, 'int': int}
+
+for i in a.values():
+  print(i("123"))
 
 # Question 25: Create a dictionary with lambda functions: {'double': lambda x: x*2, 'square': lambda x: x**2}
 print("\nQuestion 25: Create a dictionary with lambda functions: {'double': lambda x: x*2, 'square': lambda x: x**2}")
 # Your code here
 
+a = {'double': lambda x: x*2, 'square': lambda x: x**2}
+
+print(a)
+
+     
+
 # Question 26: Apply each lambda function to 5
 print("\nQuestion 26: Apply each lambda function to 5")
 # Your code here
 
+x = 5
+a = {'double': lambda x: x*2, 'square': lambda x: x**2}
+
+for i in a.values():
+  print(i(x))
+
+
 # Question 27: Create a dictionary with class values: {'list': list, 'dict': dict, 'set': set}
 print("\nQuestion 27: Create a dictionary with class values: {'list': list, 'dict': dict, 'set': set}")
 # Your code here
+
+a = {'list': list, 'dict': dict, 'set': set}
+
+print(a)
 
 # Question 28: Create instances using class dictionary
 print("\nQuestion 28: Create instances using class dictionary")
