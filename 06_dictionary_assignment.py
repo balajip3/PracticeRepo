@@ -290,53 +290,150 @@ print(a)
 print("\nQuestion 28: Create instances using class dictionary")
 # Your code here
 
+a = {'list': list, 'dict': dict, 'set': set}
+
+print(a["list"](), a["dict"](), a["set"]())
+
+
+
 # Question 29: Create a dictionary with None values: {'a': None, 'b': None, 'c': None}
 print("\nQuestion 29: Create a dictionary with None values: {'a': None, 'b': None, 'c': None}")
 # Your code here
+
+a = {'a': None, 'b': None, 'c': None}
+
+print(a)
 
 # Question 30: Replace all None values with 0
 print("\nQuestion 30: Replace all None values with 0")
 # Your code here
 
+a = {'a': None, 'b': None, 'c': None}
+
+for i in a:
+  if a[i] is None:
+    a[i] = 0 
+print(a)
+
+
 # Question 31: Create a dictionary with boolean values: {'is_active': True, 'is_admin': False}
 print("\nQuestion 31: Create a dictionary with boolean values: {'is_active': True, 'is_admin': False}")
 # Your code here
+
+a = {'is_active': True, 'is_admin': False}
+
+print(a)
 
 # Question 32: Count True values in boolean dictionary
 print("\nQuestion 32: Count True values in boolean dictionary")
 # Your code here
 
+a = {'is_active': True, 'is_admin': False}
+
+count = 0 
+
+for i in a.values():
+  if i is True:
+    count = count + 1
+print(count)
+
+
 # Question 33: Create a dictionary with complex numbers: {'z1': 3+4j, 'z2': 1+2j}
 print("\nQuestion 33: Create a dictionary with complex numbers: {'z1': 3+4j, 'z2': 1+2j}")
 # Your code here
+
+a = {'z1': 3+4j, 'z2': 1+2j}
+
+print(a)
+
 
 # Question 34: Find magnitude of each complex number
 print("\nQuestion 34: Find magnitude of each complex number")
 # Your code here
 
+a = {'z1': 3+4j, 'z2': 1+2j}
+
+for k,v in a.items():
+  print(abs(v))
+
+
+
+
 # Question 35: Create a 4-level nested dictionary
 print("\nQuestion 35: Create a 4-level nested dictionary")
 # Your code here
+
+students = {
+  "cse" : {
+    "3rd year" : {
+      "section A" : {
+        "Strength" : 60 
+      }
+    }
+  }
+}
+
+print(students)
+
 
 # Question 36: Access deepest value in 4-level nested dictionary
 print("\nQuestion 36: Access deepest value in 4-level nested dictionary")
 # Your code here
 
+students = {
+  "cse" : {
+    "3rd year" : {
+      "section A" : {
+        "Strength" : 60 
+      }
+    }
+  }
+}
+
+print(students["cse"]["3rd year"]["section A"]["Strength"])
+
+
 # Question 37: Create a dictionary with range values: {'r1': range(3), 'r2': range(5)}
 print("\nQuestion 37: Create a dictionary with range values: {'r1': range(3), 'r2': range(5)}")
 # Your code here
+
+a = {'r1': range(3), 'r2': range(5)}
+
+print(a)
 
 # Question 38: Convert each range to list
 print("\nQuestion 38: Convert each range to list")
 # Your code here
 
+a = {'r1': range(3), 'r2': range(5)}
+
+for k,v in a.items():
+  print(k, ":", list(v))
+
 # Question 39: Create a dictionary with generator values
 print("\nQuestion 39: Create a dictionary with generator values")
 # Your code here
 
+a = {
+  "g1" : (x for x in range(3)),
+  "g2" : (x*x for x in range(5))
+}
+
+print(a)
+print(a["g1"])
+print(list(a["g1"]))
+  
+  
+
 # Question 40: Convert each generator to list
 print("\nQuestion 40: Convert each generator to list")
 # Your code here
+
+b = {}
+
+for k , v in a.items():
+  b[k] = list(v)
+print(b)
 
 # Question 41: Create a dictionary with iterator values
 print("\nQuestion 41: Create a dictionary with iterator values")
