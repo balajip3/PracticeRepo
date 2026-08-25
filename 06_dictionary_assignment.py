@@ -439,38 +439,104 @@ print(b)
 print("\nQuestion 41: Create a dictionary with iterator values")
 # Your code here
 
+a = {
+  "i1" : iter([0,1,2]),
+  "i2" : iter([0,1,4,9,16])
+}
+
+for i in a.values():
+  print(type(i))
+
+
 # Question 42: Extract all elements from each iterator
 print("\nQuestion 42: Extract all elements from each iterator")
 # Your code here
+
+a = {
+  "i1" : iter([0,1,2]),
+  "i2" : iter([0,1,4,9,16])
+}
+
+for k,v in a.items():
+  print(k, ":", list(v))
+  
 
 # Question 43: Create a dictionary with nested lists: {'matrix': [[1, 2], [3, 4]], 'vector': [5, 6, 7]}
 print("\nQuestion 43: Create a dictionary with nested lists: {'matrix': [[1, 2], [3, 4]], 'vector': [5, 6, 7]}")
 # Your code here
 
+a = {'matrix': [[1, 2], [3, 4]], 'vector': [5, 6, 7]}
+
+print(a)
+
 # Question 44: Find sum of each nested list
 print("\nQuestion 44: Find sum of each nested list")
 # Your code here
+
+a = {'matrix': [[1, 2], [3, 4]], 'vector': [5, 6, 7]}
+
+for row in a["matrix"]:
+  print(f"{row} sum = {sum(row)}")
+print(f"{a["vector"]} sum = {sum(a["vector"])}")
+
+
+total = sum(a["vector"]) + sum(sum(row) for row in a["matrix"])
+print("total sum :", total)
 
 # Question 45: Create a dictionary with nested dictionaries: {'config': {'db': {'host': 'localhost', 'port': 5432}}}
 print("\nQuestion 45: Create a dictionary with nested dictionaries: {'config': {'db': {'host': 'localhost', 'port': 5432}}}")
 # Your code here
 
+a = {'config': {'db': {'host': 'localhost', 'port': 5432}}}
+
+print(a)
+
 # Question 46: Access database port from nested configuration
 print("\nQuestion 46: Access database port from nested configuration")
 # Your code here
+
+a = {'config': {'db': {'host': 'localhost', 'port': 5432}}}
+
+print(a["config"]["db"]["port"])
+
 
 # Question 47: Create a dictionary with nested tuples: {'points': ((1, 2), (3, 4)), 'rgb': ((255, 0, 0), (0, 255, 0))}
 print("\nQuestion 47: Create a dictionary with nested tuples: {'points': ((1, 2), (3, 4)), 'rgb': ((255, 0, 0), (0, 255, 0))}")
 # Your code here
 
+a = {'points': ((1, 2), (3, 4)), 'rgb': ((255, 0, 0), (0, 255, 0))}
+
+print(a)
+
 # Question 48: Extract first point coordinates
 print("\nQuestion 48: Extract first point coordinates")
 # Your code here
+
+a = {'points': ((1, 2), (3, 4)), 'rgb': ((255, 0, 0), (0, 255, 0))}
+
+print(a["points"][0])
 
 # Question 49: Create a dictionary with nested sets: {'groups': {{1, 2, 3}, {4, 5, 6}}, 'categories': {{'a', 'b'}, {'c', 'd'}}}
 print("\nQuestion 49: Create a dictionary with nested sets: {'groups': {{1, 2, 3}, {4, 5, 6}}, 'categories': {{'a', 'b'}, {'c', 'd'}}}")
 # Your code here
 
+a = {
+    'groups': {frozenset({1, 2, 3}), frozenset({4, 5, 6})}, 
+    'categories': {frozenset({'a', 'b'}), frozenset({'c', 'd'})}
+    }
+
+print(a)
+
 # Question 50: Find union of all nested sets
 print("\nQuestion 50: Find union of all nested sets")
 # Your code here 
+
+a = {
+    'groups': {frozenset({1, 2, 3}), frozenset({4, 5, 6})}, 
+    'categories': {frozenset({'a', 'b'}), frozenset({'c', 'd'})}
+    }
+all_union = set().union(*a["groups"], *a["categories"])
+print(all_union)
+
+
+
